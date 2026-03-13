@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryon Carlson — IT Operations & Service Delivery Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a2e4a;
+    --navy-mid: #1e3a5f;
+    --navy-light: #2d5282;
+    --gold: #c9a84c;
+    --gold-light: #e8c870;
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --light-gray: #e8e4de;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(45,82,130,0.4) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-title {
+    font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 16px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    margin: 32px auto;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    max-width: 560px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .hero-cta {
+    margin-top: 44px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.2s forwards;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 32px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+    border: 2px solid var(--gold);
+  }
+  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+  .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 24px; }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+
+  .section-rule {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 40px;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #374151;
+    margin-bottom: 20px;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .stat {
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* ── CAREER ── */
+  .career { background: var(--cream); }
+
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), var(--light-gray));
+  }
+
+  .timeline-item {
+    padding-left: 32px;
+    padding-bottom: 44px;
+    position: relative;
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--cream);
+  }
+
+  .timeline-dates {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .timeline-company {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .timeline-role {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .timeline-desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #4b5563;
+    max-width: 620px;
+  }
+
+  /* ── EXPERTISE ── */
+  .expertise { background: var(--navy); }
+  .expertise .section-title { color: var(--white); }
+  .expertise .section-label { color: var(--gold); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 3px;
+    padding: 20px 22px;
+    transition: all 0.25s ease;
+  }
+
+  .skill-card:hover {
+    background: rgba(201,168,76,0.1);
+    border-color: rgba(201,168,76,0.5);
+    transform: translateY(-2px);
+  }
+
+  .skill-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .skill-card-items {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* ── EDUCATION ── */
+  .education { background: var(--white); }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .edu-card {
+    border-top: 3px solid var(--gold);
+    padding-top: 20px;
+  }
+
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .edu-school {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+
+  .edu-year {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── CERTIFICATIONS ── */
+  .certs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .cert-tag {
+    background: var(--cream);
+    border: 1px solid var(--light-gray);
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-mid);
+    letter-spacing: 0.03em;
+  }
+
+  .cert-tag.in-progress {
+    border-color: var(--gold);
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .contact .section-title { color: var(--white); }
+  .contact .section-label { color: var(--gold); }
+  .contact .section-rule { margin: 0 auto 40px; }
+
+  .contact-tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    max-width: 500px;
+    margin: 0 auto 44px;
+    line-height: 1.7;
+  }
+
+  .contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 44px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact-item-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-item-value {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .contact-item-value:hover { color: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111827;
+    text-align: center;
+    padding: 20px 24px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-stats { flex-direction: row; flex-wrap: wrap; }
+    .stat { flex: 1; min-width: 120px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-rule"></div>
+  <h1 class="hero-name">Bryon Carlson</h1>
+  <p class="hero-title">IT Operations &amp; Service Delivery Leader</p>
+  <div class="hero-divider"></div>
+  <p class="hero-tagline">20+ years leading enterprise incident management, service delivery, and high-performing IT teams — from Fortune 500 operations to building something from scratch.</p>
+  <div class="hero-cta">
+    <a href="#contact" class="btn btn-gold">Get In Touch</a>
+    <a href="#career" class="btn btn-outline">View Experience</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Calm under pressure.<br>Clear in communication.</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I started my IT career the hard way — building my own business from the ground up, showing up personally for every client, and learning what service truly means to the people depending on it. That foundation never left me.</p>
+        <p>From there I grew into enterprise IT leadership, spending over a decade managing onshore and offshore teams, and ultimately serving as Senior Incident Commander at Equifax — responsible for leading the organization through its highest-impact technology crises and reporting directly to executive leadership.</p>
+        <p>Whether it is a P1 production outage, a struggling team, or a client who needs answers, I bring the same thing every time: clear thinking, steady leadership, and follow-through.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years in IT Operations &amp; Service Delivery</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">14</div>
+          <div class="stat-label">Engineers led across onshore &amp; offshore teams at DXC Technology</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Fortune 500</div>
+          <div class="stat-label">Enterprise incident command experience at Equifax</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">8 yrs</div>
+          <div class="stat-label">Founder &amp; operator of My PC Technician</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="career" id="career">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Career Journey</p>
+      <h2 class="section-title">Experience that spans<br>every layer of IT.</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">2019 – 2024</div>
+        <div class="timeline-company">Equifax</div>
+        <div class="timeline-role">Senior Incident Commander / Incident Manager / TOC Oversight Lead / Incident &amp; Escalations Manager</div>
+        <div class="timeline-desc">Led enterprise incident and escalation operations for a global Fortune 500 organization. Implemented ITIL best practices, oversaw cross-functional teams, produced executive-level reporting, and owned end-to-end incident lifecycle management from triage through post-incident review and root cause resolution.</div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">2012 – 2019</div>
+        <div class="timeline-company">DXC Technology</div>
+        <div class="timeline-role">Service Delivery Manager / Incident Coordination Lead / Storage Engineer Team Lead</div>
+        <div class="timeline-desc">Led a team of 14 engineers across onshore and offshore locations in a 24/7 managed services environment. Oversaw service delivery, SLA performance, stakeholder reporting, change management coordination, and continuous process improvement across enterprise infrastructure platforms.</div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">2011</div>
+        <div class="timeline-company">Alexander Open Systems</div>
+        <div class="timeline-role">Senior Systems Engineer</div>
+        <div class="timeline-desc">Enterprise systems engineering and infrastructure support.</div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">2008 – 2011</div>
+        <div class="timeline-company">EMC Corporation</div>
+        <div class="timeline-role">Storage Administrator / Customer Engineer</div>
+        <div class="timeline-desc">Enterprise storage administration and customer-facing engineering support across complex infrastructure environments.</div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">2003 – 2011</div>
+        <div class="timeline-company">My PC Technician</div>
+        <div class="timeline-role">Founder &amp; Owner</div>
+        <div class="timeline-desc">Built and operated a full-service managed IT support business from the ground up — managing client relationships, service delivery, staff, financials, and operations. This experience formed the foundation of a genuine, client-first approach to IT service that has shaped everything since.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Core Expertise</p>
+      <h2 class="section-title">What I bring to the table.</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-title">Incident &amp; Problem Management</div>
+        <div class="skill-card-items">P1/P2 incident command, RCA, post-incident reviews, KEDB, recurrence prevention</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">Service Delivery Management</div>
+        <div class="skill-card-items">SLA/OLA governance, monthly reporting, stakeholder meetings, client onboarding</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">Team Leadership</div>
+        <div class="skill-card-items">Onshore &amp; offshore teams, coaching &amp; mentoring, performance management, culture building</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">ITSM Platforms &amp; Tools</div>
+        <div class="skill-card-items">ServiceNow, Jira, PagerDuty, Datadog, BigPanda, AppDynamics, Remedy</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">Process &amp; Documentation</div>
+        <div class="skill-card-items">Runbooks, SOPs, knowledge base development, process improvement, ITIL frameworks</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">Executive Communication</div>
+        <div class="skill-card-items">CIO-level reporting, client escalation management, stakeholder communication under pressure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Education &amp; Certifications</p>
+      <h2 class="section-title">Academic &amp; professional<br>foundations.</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-degree">BS — Management &amp; Organizational Leadership</div>
+        <div class="edu-school">Millikin University</div>
+        <div class="edu-year">2003–2006</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">AAS — Microcomputer Applications Specialist</div>
+        <div class="edu-school">Richland Community College</div>
+        <div class="edu-year">1999–2003</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">AAS — Network / PC Technician</div>
+        <div class="edu-school">Richland Community College</div>
+        <div class="edu-year">1999–2003</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 48px;">
+      <p class="section-label" style="margin-bottom: 16px;">Certifications &amp; Training</p>
+      <div class="certs-list">
+        <span class="cert-tag">CompTIA A+</span>
+        <span class="cert-tag">EMC Technology Foundations</span>
+        <span class="cert-tag">Cisco CCNA (Coursework)</span>
+        <span class="cert-tag">PagerDuty Incident Management</span>
+        <span class="cert-tag">Traffic Incident Management (TIM)</span>
+        <span class="cert-tag in-progress">ITIL 4 Foundation — In Progress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Let's Connect</p>
+      <h2 class="section-title">Ready to talk.</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p class="contact-tagline reveal">I am actively exploring senior IT leadership opportunities. If you are looking for someone who leads with calm, communicates with clarity, and delivers results — let's have a conversation.</p>
+    <div class="contact-details reveal">
+      <div class="contact-item">
+        <span class="contact-item-label">Location</span>
+        <span class="contact-item-value">Cartersville, GA (Atlanta Metro)</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-label">Phone</span>
+        <a href="tel:8168097368" class="contact-item-value">816-809-7368</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-label">Email</span>
+        <a href="mailto:bryon.a.carlson@gmail.com" class="contact-item-value">bryon.a.carlson@gmail.com</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <a href="mailto:bryon.a.carlson@gmail.com" class="btn btn-gold">Send Me a Message</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Bryon Carlson &mdash; IT Operations &amp; Service Delivery Leader</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
