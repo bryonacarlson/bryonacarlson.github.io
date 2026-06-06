@@ -4,54 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryon Carlson | AI & IT Operations Portfolio</title>
+    
+    <!-- Google Fonts Import (Required for styles to render properly) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to your global CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- FIXED NAVBAR (Aligned with global style.css structure) -->
 <header class="site-header">
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="ai-portfolio.html">AI Portfolio</a>
-        <a href="incidents.html">Incidents</a>
-        <a href="apps.html">Apps & Tools</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-logo">Bryon Carlson<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="ai-portfolio.html">AI Portfolio</a></li>
+            <li><a href="incidents.html">Incidents</a></li>
+            <li><a href="apps.html">Apps & Tools</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-    <h1>AI‑Assisted Development & IT Operations</h1>
-    <p>
+    <div class="hero-rule"></div>
+    <h1 class="hero-name">AI‑Assisted Development &amp; IT Operations</h1>
+    <p class="hero-title">IT Operations &amp; Service Delivery Leader</p>
+    <p class="hero-tagline">
         I build AI‑augmented tools, automation systems, and operational workflows that improve 
         reliability, reduce MTTR, and accelerate delivery. This portfolio showcases my work across 
         AI development, IT operations, and incident leadership.
     </p>
-    <a href="ai-portfolio.html" class="button">Explore My Work</a>
+    <div class="hero-cta">
+        <a href="ai-portfolio.html" class="btn btn-gold">Explore My Work</a>
+    </div>
 </section>
 
+<!-- FEATURED HIGHLIGHTS -->
 <section class="highlights">
-    <h2>Featured Areas</h2>
+    <div class="container">
+        <p class="section-label">Featured Areas</p>
+        <h2 class="section-title">Core Operational Pillars</h2>
+        <div class="section-rule"></div>
 
-    <div class="card-grid">
-        <div class="card">
-            <h3>AI‑Assisted Systems</h3>
-            <p>Dashboards, automation engines, workflow tools, and operational intelligence.</p>
-        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>AI‑Assisted Systems</h3>
+                <p>Dashboards, automation engines, workflow tools, and operational intelligence built to maximize efficiency.</p>
+            </div>
 
-        <div class="card">
-            <h3>Incident Leadership</h3>
-            <p>P1/P2 command, RCA development, communication frameworks, and recovery strategy.</p>
-        </div>
+            <div class="card">
+                <h3>Incident Leadership</h3>
+                <p>P1/P2 command, RCA development, communication frameworks, and robust recovery strategy under pressure.</p>
+            </div>
 
-        <div class="card">
-            <h3>IT Ops Tools</h3>
-            <p>Onboarding engines, deployment automation, backup/restore systems, and more.</p>
+            <div class="card">
+                <h3>IT Ops Tools</h3>
+                <p>Onboarding engines, deployment automation, and custom backup/restore systems designed for scale.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- GLOBAL FOOTER -->
 <footer class="site-footer">
-    <p>© 2026 Bryon Carlson</p>
+    <p>&copy; 2026 Bryon Carlson &mdash; AI &amp; IT Operations Leader</p>
 </footer>
 
 </body>
