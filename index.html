@@ -3,98 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryon A. Carlson — Senior Incident Manager</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Bryon Carlson | Senior Incident Manager &amp; IT Operations Leader</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Responsive Spacing & Container Expansion Utilities */
+        .hero-tagline.extended-layout {
+            max-width: 950px;
+            margin: 32px auto 0 auto;
+            text-align: center;
+            padding: 0 16px;
+        }
+        
+        .profile-summary-block {
+            background: var(--white);
+            padding: 80px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .wide-text-container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .wide-text-container p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        /* Mobile Adjustments for Justified Text */
+        @media (max-width: 768px) {
+            .wide-text-container p {
+                text-align: left;
+                font-size: 1rem;
+            }
+            .hero-tagline.extended-layout {
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>BRYON A. CARLSON</h1>
-        <p class="contact-info">
-            Cartersville, GA (Atlanta Metro) &nbsp;|&nbsp; 
-            Phone: 816-809-7368 &nbsp;|&nbsp; 
-            Email: <a href="mailto:bryon.a.carlson@gmail.com">bryon.a.carlson@gmail.com</a>
-        </p>
-        <p class="social-links">
-            <a href="https://linkedin.com/in/bryon-a-carlson" target="_blank">LinkedIn Profile</a> &nbsp;|&nbsp; 
-            <a href="https://bryonacarlson.github.io">Portfolio Home</a>
-        </p>
-    </header>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Bryon Carlson<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="ai-portfolio.html">AI Portfolio</a></li>
+            <li><a href="incidents.html">Incidents</a></li>
+            <li><a href="apps.html">Apps &amp; Tools</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <hr>
+<section class="hero">
+    <div class="hero-rule"></div>
+    <h1 class="hero-name">Senior Incident Command<br>&amp; IT Operations</h1>
+    <p class="hero-title">12 Years of Hands-On Enterprise Incident Management Leadership</p>
+    <p class="hero-tagline extended-layout">
+        I am a Senior Incident Manager with 12 years of hands-on incident management experience across Fortune 100 enterprise and managed services environments. Built on a direct foundation of enterprise systems, storage engineering, and hands-on operations, I bring genuine technical credibility to a major incident bridge call, not just process management. I stabilize high-severity outages through calm execution, structured communications, and an unyielding commitment to full resolution.
+    </p>
+    <div class="hero-cta">
+        <a href="incidents.html" class="btn btn-gold">View Incident Library</a>
+        <a href="resume.html" class="btn btn-outline">View Full Resume</a>
+    </div>
+</section>
 
-        <section id="hero">
-            <h2>SENIOR INCIDENT MANAGER</h2>
-            <h3>Operational Command & Enterprise Infrastructure Execution</h3>
-            <p>
-                I am a Senior Incident Manager with 12 years of hands-on incident management experience across Fortune 100 enterprise and managed services environments[cite: 7, 10]. My career is built on a direct foundation of core infrastructure work—including storage engineering, enterprise systems, and hands-on IT operations—meaning I bring technical credibility to a major incident bridge call, not just process management[cite: 8].
-            </p>
-            <p>
-                I am known for calm command under pressure, structured communication to engineers and executives alike, and a personal ownership mentality that keeps me on an infrastructure outage from the first page to full resolution[cite: 5, 8]. I am currently completing my ITIL 4 Foundation certification to complement my practical enterprise experience[cite: 6, 9].
-            </p>
-        </section>
-
-        <hr>
-
-        <section id="differentiator">
-            <h2>THE CORE DIFFERENTIATOR</h2>
-            <p>
-                Most incident managers fall into one of two categories: they are either pure process followers who lack technical depth, or they are former engineers who struggle to command a high-pressure room[cite: 56]. My background bridges this gap entirely[cite: 56]:
-            </p>
-            <ul>
-                <li><strong>The Engineering End:</strong> Spent 7 years as a Storage Team Lead at DXC, acting as the technical representative on every critical storage incident bridge from inception to full recovery[cite: 4, 30].</li>
-                <li><strong>The Command End:</strong> Spent 5 years as a Major Incident Manager and Incident Commander at Equifax, controlling the bridge, directing cross-functional resolution teams, and managing executive communications[cite: 4, 25, 26].</li>
-            </ul>
-            <p>
-                Knowing both sides of the bridge means I understand what engineering teams are telling me, I know when to push for deeper analysis, and I know exactly how to shield technical assets from corporate noise during a crisis[cite: 59, 60].
-            </p>
-        </section>
-
-        <hr>
-
-        <section id="competencies">
-            <h2>CORE COMPETENCIES & TOOLSTACK</h2>
+<section class="profile-summary-block">
+    <div class="wide-text-container">
+        <p class="section-label" style="color: var(--navy-light); text-align: center; margin-bottom: 20px;">Core Philosophy</p>
+        
+        <div style="font-family: 'Source Sans 3', sans-serif; color: var(--navy); max-width: 850px; margin: 0 auto; text-align: left;">
             
-            <h3>Incident & ITSM Leadership</h3>
-            <ul>
-                <li>Major Incident Management (MIM) | P1 / P2 Incident Command | Bridge Facilitation [cite: 25, 50]</li>
-                <li>Escalation Leadership | Incident Lifecycle Management | 24x7 On-Call Operations [cite: 50, 53]</li>
-                <li>Post-Incident Reviews (PIR) | Root Cause Analysis (RCA) Support | Runbook & SOP Development [cite: 27, 34, 50]</li>
-                <li>Change Management Review | Incident Rollback Direction | Problem Record Coordination [cite: 27, 33, 50]</li>
-            </ul>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; line-height: 1.4; margin-bottom: 24px; text-align: center; color: var(--navy);">
+                "I take it personally when a system is down."
+            </h3>
 
-            <h3>Enterprise Systems & Monitoring Tools</h3>
-            <ul>
-                <li><strong>ITSM Platforms:</strong> ServiceNow, PagerDuty, StatusPage, Remedy, Jira [cite: 29, 42]</li>
-                <li><strong>Observability Suites:</strong> Datadog, BigPanda, AppDynamics, Splunk (Operational View) [cite: 29, 42]</li>
-                <li><strong>Infrastructure Foundations:</strong> Windows Server, Hyper-V, Cisco MDS & Brocade Fiber Switches, Enterprise Storage Architecture (EMC Systems) [cite: 35, 43, 44, 45]</li>
-                <li><strong>Automation & Tools:</strong> PowerShell scripting, SQLite, Git / GitHub, Google Apps Script [cite: 18, 42]</li>
-            </ul>
-        </section>
+            <p style="line-height: 1.7; margin-bottom: 20px; font-weight: 400;">
+                To me, major incident management isn't a coordination checklist or a shifting of administrative duties; it is a direct ownership function. I live by the rule that the best ability is availability. That applies to the infrastructure, but it also applies to me personally. I am fully committed to the lifecycle of an incident, ensuring that while I am on the bridge, the technical team has absolute focus.
+            </p>
 
-        <hr>
+            <p style="line-height: 1.7; margin-bottom: 20px; font-weight: 400;">
+                If a situational shift handoff is required, I ensure the transition is seamless and completely documented so continuity is maintained. My personal ownership doesn't stop until service is fully restored in production.
+            </p>
 
-        <section id="philosophy">
-            <h2>OPERATIONAL PHILOSOPHY</h2>
-            <ul>
-                <li><strong>Availability is Fundamental:</strong> I treat every high-severity outage as a personal responsibility to resolve[cite: 57]. I do not walk away from a bridge call when a shift ends if a clear, verified path to resolution is not yet established[cite: 5, 58].</li>
-                <li><strong>Communication is Clarity:</strong> Technical failures require plain language[cite: 39]. My job is to translate complex, multi-layered system defects into clear, actionable impact statements for business stakeholders and executive leadership in real time[cite: 26].</li>
-                <li><strong>Verification Over Assumption:</strong> I use my technical background to validate infrastructure updates and automation scripts rather than trusting unchecked data[cite: 18, 20]. The same analytical approach I apply to enterprise system recovery guides my personal automation and system administration workflows[cite: 18, 20].</li>
-            </ul>
-        </section>
+            <p style="line-height: 1.7; font-weight: 400;">
+                Following service restoration, I immediately conduct the initial root cause analysis and document early indicators to ensure a clean, precise handoff to Problem Management. This baseline availability gives engineering teams the calm space they need to remediate, and it gives executive stakeholders absolute certainty that their environment is in steady hands.
+            </p>
 
-        <hr>
-    </main>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <nav>
-            <a href="ai-portfolio.html">Technical & AI Portfolio</a> | 
-            <a href="resume.html">Detailed Experience & Resume</a> | 
-            <a href="incidents.html">Incident Case Studies</a> | 
-            <a href="contact.html">Contact Me Directly</a>
-        </nav>
-    </footer>
+<section class="highlights">
+    <div class="container">
+        <p class="section-label">Core Differentiators</p>
+        <h2 class="section-title">Career Pillars &amp; Foundations</h2>
+        <div class="section-rule"></div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Incident Command</h3>
+                <p>5 years running corporate major incident triage bridges at Equifax as a Major Incident Manager and Incident Commander. Proven record managing P1/P2 lifecycles, directing complex cross-functional teams, and delivering clear, real-time communications to business stakeholders and executive leadership.</p>
+                <div class="tag-list">
+                    <span class="tag">P1/P2 Lifecycle</span>
+                    <span class="tag">Bridge Command</span>
+                    <span class="tag">ServiceNow</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Technical Leadership</h3>
+                <p>7 years as an enterprise Storage Engineer Team Lead at DXC. Acted as the technical representative on every critical incident bridge call where storage architecture was involved, coordinating day-to-day work, system patches, and change controls from initial page through to full resolution.</p>
+                <div class="tag-list">
+                    <span class="tag">Team Leadership</span>
+                    <span class="tag">Change Approval</span>
+                    <span class="tag">Technical Lead</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Infrastructure Grounding</h3>
+                <p>Deep foundational background in technical systems administration, on-site hardware triage, and multi-platform infrastructure deployment. Fully proficient in PowerShell automation, data structures, and applying systematic logic to complex troubleshooting environments.</p>
+                <div class="tag-list">
+                    <span class="tag">PowerShell</span>
+                    <span class="tag">Enterprise Storage</span>
+                    <span class="tag">Systems Admin</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Bryon Carlson &mdash; Senior Incident Manager &amp; IT Operations Leader</p>
+</footer>
 
 </body>
 </html>
