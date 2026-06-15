@@ -237,7 +237,7 @@ section {
 }
 
 /* ==========================================================================
-   7. MULTI-PAGE COMPONENT LAYOUTS (Cards, Timelines, Grids, Showcases)
+   7. MULTI-PAGE COMPONENT LAYOUTS (Cards, Timelines, Grids)
    ========================================================================== */
 
 /* The Premium Card Grid System (Used for Apps, Tools, and AI Portfolio blocks) */
@@ -273,121 +273,6 @@ section {
     font-weight: 300;
     color: #4b5563;
     line-height: 1.7;
-}
-
-/* AI Portfolio Showcase Shell Modifications */
-.portfolio-showcase {
-    margin: 40px auto;
-}
-
-.showcase-block {
-    background: var(--white);
-    border: 1px solid var(--light-gray);
-    border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(26, 46, 74, 0.04);
-    padding: 40px;
-    margin-bottom: 40px;
-}
-
-/* Mobile-first alignment resolves header overlap drops on tight viewports */
-.showcase-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-items: stretch;
-}
-
-.screenshot-container {
-    background: #0d0d10;
-    padding: 16px;
-    border-radius: 6px;
-    border: 1px solid #1a1a24;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.screenshot-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Accessible slate gray tint ensuring high readability over dark frames */
-.screenshot-caption {
-    display: block;
-    font-size: 0.9rem;
-    color: #94a3b8; 
-    margin-top: 14px;
-    font-style: italic;
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-.topology-box {
-    background: #090e14;
-    color: #f0f4f8;
-    padding: 32px;
-    border-radius: 4px;
-    margin-top: 32px;
-}
-
-.topology-box pre {
-    font-family: 'Consolas', monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #38bec9;
-    background: #101720;
-    padding: 24px;
-    border-radius: 4px;
-    border-left: 4px solid var(--gold);
-    overflow-x: auto;
-    margin: 0;
-}
-
-.showcase-details ul {
-    padding-left: 20px;
-    margin-top: 12px;
-}
-
-.showcase-details li {
-    margin-bottom: 8px;
-    color: #4b5563;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.blueprint-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
-.blueprint-card {
-    background: var(--light-gray);
-    padding: 24px;
-    border-radius: 4px;
-    border-left: 3px solid var(--navy-light);
-}
-
-.blueprint-card h4 {
-    margin-top: 0;
-    color: var(--navy);
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-}
-
-.blueprint-card p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #4b5563;
-    line-height: 1.6;
 }
 
 /* The Enterprise Timeline Component (Used in resume.html and incidents.html) */
@@ -513,14 +398,4 @@ section {
     .navbar { flex-direction: column; gap: 16px; text-align: center; }
     .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
     .card-grid { grid-template-columns: 1fr; }
-}
-
-@media (min-width: 769px) {
-    /* Snaps portfolio modules cleanly back into side-by-side grids on desktops */
-    .showcase-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-    }
 }
