@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Bryon Carlson</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,55 +27,63 @@
     </nav>
 </header>
 
-<section class="hero" style="min-height: 35vh; padding: 60px 24px;">
+<section class="hero">
     <div class="hero-rule"></div>
-    <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.5rem);">Connect With Me</h1>
-    <p class="hero-title">Establish Operational Communications</p>
+    <h1 class="hero-name">Let's Connect</h1>
+    <p class="hero-title">Availability, Collaborations, and Professional Inquiries</p>
+    <p class="hero-tagline">
+        Whether you are looking to scale an incident response team, discussing system automation architecture, or just want to talk shop about infrastructure operations—I'm always open to a conversation. Drop a message through the channels below, and I'll get back to you shortly.
+    </p>
 </section>
 
-<section style="background: var(--light-blue); padding: 60px 24px; min-height: 40vh;">
-    <div class="container" style="max-width: 650px;">
-        
-        <p class="section-label">Availability</p>
-        <h2 class="section-title">Professional Channels</h2>
-        <div class="section-rule" style="margin-bottom: 32px;"></div>
-        
-        <div style="background: var(--white); padding: 32px; border-radius: 4px; border-top: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(26, 46, 74, 0.04);">
+<main class="container contact-showcase" style="margin-bottom: 80px;">
+    
+    <div class="showcase-block" style="border-top: 4px solid var(--gold); padding-top: 40px;">
+        <div class="showcase-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
             
-            <div style="margin-bottom: 28px;">
-                <h4 style="font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 6px;">Secure Email</h4>
-                <p style="font-size: 1.15rem; font-weight: 400;">
-                    <a href="mailto:bryon.a.carlson@gmail.com" style="color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--light-gray); transition: border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--light-gray)'">
-                        bryon.a.carlson@gmail.com
-                    </a>
-                </p>
+            <!-- Connection Channel 1: LinkedIn -->
+            <div class="blueprint-card" style="background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <p class="section-label" style="margin-bottom: 12px;">Networking &amp; DM</p>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">LinkedIn Professional</h3>
+                    <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
+                        For real-time updates, resume tracking, or industry networking, my LinkedIn profile is always active. It's the most reliable place to send a quick direct message or check out ongoing professional collaborations.
+                    </p>
+                </div>
+                <a href="https://www.linkedin.com/in/bryon-a-carlson" target="_blank" rel="noopener noreferrer" class="tag" style="display: inline-block; text-align: center; background: var(--navy); color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s;">
+                    View LinkedIn Profile &rarr;
+                </a>
             </div>
 
-            <div style="margin-bottom: 28px;">
-                <h4 style="font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 6px;">Professional Network</h4>
-                <p style="font-size: 1.15rem; font-weight: 400;">
-                    <a href="https://linkedin.com/in/bryon-a-carlson" target="_blank" rel="noopener noreferrer" style="color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--light-gray); transition: border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--light-gray)'">
-                        linkedin.com/in/bryon-a-carlson
-                    </a>
-                </p>
-            </div>
-
-            <div style="margin-bottom: 12px;">
-                <h4 style="font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 6px;">Digital Headquarters</h4>
-                <p style="font-size: 1.15rem; font-weight: 400;">
-                    <a href="https://bryonacarlson.github.io" style="color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--light-gray); transition: border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--light-gray)'">
-                        bryonacarlson.github.io
-                    </a>
-                </p>
+            <!-- Connection Channel 2: Email -->
+            <div class="blueprint-card" style="background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <p class="section-label" style="margin-bottom: 12px;">Direct Inquiries</p>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">Email Correspondence</h3>
+                    <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
+                        Have a formal opening, project requirements document, or a technical inquiry? Send a message directly to my inbox. I monitor my correspondence daily and generally reply within one business day.
+                    </p>
+                </div>
+                <a href="mailto:bryon.a.carlson+github@gmail.com" class="tag" style="display: inline-block; text-align: center; background: var(--gold); color: var(--navy); padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s;">
+                    Send an Email &rarr;
+                </a>
             </div>
 
         </div>
-
     </div>
-</section>
+
+    <!-- Communication Ethos Callout -->
+    <div class="showcase-block" style="margin-top: 40px; background: rgba(212, 175, 55, 0.05); padding: 30px; border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0;">
+        <h4 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 8px;">Operational Availability:</h4>
+        <p style="font-size: 1rem; color: #4b5563; line-height: 1.6; margin: 0;">
+            Based in the Eastern Time Zone (EST). While I am accustomed to managing 24/7 critical major incidents and shifts globally, standard non-emergency correspondence is reviewed during business hours.
+        </p>
+    </div>
+
+</main>
 
 <footer class="site-footer">
-    <p>&copy; 2026 Bryon Carlson &mdash; Major Incident &amp; IT Operations Leader</p>
+    <p>&copy; 2026 Bryon Carlson &mdash; Senior Incident Manager &amp; IT Operations Leader</p>
 </footer>
 
 </body>
