@@ -9,6 +9,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Modern Terminal CSS Container */
+        .terminal-container {
+            margin-top: 30px;
+            background: #090d16;
+            border: 1px solid #1e293b;
+            border-left: 4px solid var(--gold);
+            border-radius: 6px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .terminal-header {
+            font-family: 'Consolas', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .terminal-body {
+            width: 100%;
+            overflow-x: auto; /* Graceful fallback interface swipe for mobile */
+            white-space: pre;
+            word-wrap: normal;
+            margin: 0;
+            padding-bottom: 8px;
+        }
+
+        .terminal-body pre {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #38bdf8; /* Sharp blue orchestrator color */
+            margin: 0;
+        }
+
+        /* Specific mobile tuning to ensure text stays as readable as possible */
+        @media screen and (max-width: 768px) {
+            .showcase-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .screenshot-container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .screenshot-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 6px;
+            }
+
+            .terminal-body pre {
+                font-size: 0.75rem; /* Scales text down slightly on phones to maximize layout visibility */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -45,9 +112,20 @@
             AI engines accelerate script generation, but they lack real-world operational and technical context. Across the development of these infrastructure utilities, my role was that of the solution architect. I identified the operational bottlenecks, defined the administrative and database requirements, and directed AI engines to generate the code. Crucially, I manually audited, tested, and verified every output to ensure stability before deployment.
         </p>
         
-        <div class="topology-box">
-            <p style="font-family: 'Consolas', monospace; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 16px; font-weight: 600;">Operational Automation Topology</p>
-            <pre>[ IT-Ops-Console.exe ]  &lt;-- Central Launcher UI (WPF/XAML Windows Binary)         │         ├───► [ PC Onboarding Module ]       ──► Endpoint Provisioning Scripts         ├───► [ Software Inventory Builder ] ──► Application Analytics Engine         ├───► [ Backup-All Pipeline ]        ──► SHA-256 Cryptographic Delta Sync         └───► [ IT Asset Manager v13.4 ]     ──► SQLite Data Management Studio                                                     │                                                     └──► [ Inventory.db ] (SQLite)</pre>
+        <div class="terminal-container">
+            <div class="terminal-header">Distributed System Topology Matrix</div>
+            <div class="terminal-body">
+<pre>
+[ IT-Ops-Console.exe ]  &lt;-- Compiled WPF/XAML Master Orchestration Shell
+        │
+        ├───► [ PC Onboarding Module ]        ──► Endpoint Provisioning Scripts
+        ├───► [ Software Inventory Builder ]  ──► Application Analytics Engines
+        ├───► [ Backup-All Engine ]           ──► SHA-256 Cryptographic Delta Sync
+        └───► [ IT Asset Manager v13.4 ]      ──► WinForms Data Management Studio
+                                                      │
+                                                      └───► [ Inventory.db ] (SQLite)
+</pre>
+            </div>
         </div>
     </div>
 

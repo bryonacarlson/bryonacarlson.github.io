@@ -3,12 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Bryon Carlson</title>
+    <title>AI Portfolio | Bryon Carlson</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Responsive Framework Matrix Table */
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .responsive-table th {
+            background: #f9fafb;
+            color: var(--navy);
+            font-weight: 600;
+            padding: 12px 16px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .responsive-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        .responsive-table .module-name {
+            font-family: 'Consolas', monospace;
+            font-weight: bold;
+            color: var(--navy);
+        }
+        
+        /* Mobile Breakpoint for Table & Layout Components */
+        @media screen and (max-width: 768px) {
+            .showcase-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .screenshot-container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .screenshot-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 6px;
+            }
+
+            .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+                display: block;
+                width: 100%;
+            }
+            .responsive-table thead {
+                display: none;
+            }
+            .responsive-table tr {
+                padding: 16px;
+                border-bottom: 4px solid #e5e7eb;
+                background: #fff;
+            }
+            .responsive-table td {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0;
+                border: none;
+                text-align: right;
+            }
+            .responsive-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--navy);
+                text-align: left;
+                padding-right: 15px;
+            }
+            .responsive-table .module-name {
+                color: #38bdf8;
+                background: #111827;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,66 +101,159 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="ai-portfolio.html">AI Portfolio</a></li>
+            <li><a href="ai-portfolio.html" class="active">AI Portfolio</a></li>
             <li><a href="incidents.html">Incidents</a></li>
             <li><a href="apps.html">Apps &amp; Tools</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-rule"></div>
-    <h1 class="hero-name">Let's Connect</h1>
-    <p class="hero-title">Availability, Collaborations, and Professional Inquiries</p>
+    <h1 class="hero-name">AI-Assisted Operational<br>Automation &amp; Scripting</h1>
+    <p class="hero-title">Human-in-the-Loop Verification &amp; Workflow Optimization</p>
     <p class="hero-tagline">
-        Whether you are looking to scale an incident response team, discussing system automation architecture, or just want to talk shop about infrastructure operations—I'm always open to a conversation. Drop a message through the channels below, and I'll get back to you shortly.
+        Modern IT operations rely on identifying manual process waste and designing reliable scripts. I utilize AI development tools as efficiency multipliers—defining the operational logic, structuring requirements, and manually auditing every line of code to ensure absolute production safety.
     </p>
 </section>
 
-<main class="container contact-showcase" style="margin-bottom: 80px;">
+<main class="container portfolio-showcase">
     
-    <div class="showcase-block" style="border-top: 4px solid var(--gold); padding-top: 40px;">
-        <div class="showcase-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-            
-            <!-- Connection Channel 1: LinkedIn -->
-            <div class="blueprint-card" style="background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <p class="section-label" style="margin-bottom: 12px;">Networking &amp; DM</p>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">LinkedIn Professional</h3>
-                    <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
-                        For real-time updates, resume tracking, or industry networking, my LinkedIn profile is always active. It's the most reliable place to send a quick direct message or check out ongoing professional collaborations.
-                    </p>
-                </div>
-                <a href="https://www.linkedin.com/in/bryon-a-carlson" target="_blank" rel="noopener noreferrer" class="tag" style="display: inline-block; text-align: center; background: var(--navy); color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s;">
-                    View LinkedIn Profile &rarr;
-                </a>
+    <div class="showcase-block" style="border-top: 4px solid var(--gold);">
+        <p class="section-label">Engineering Framework</p>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); margin-bottom: 20px;">The AI-Assisted Development Model</h2>
+        <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.7; margin-bottom: 24px;">
+            AI engines accelerate script generation, but they lack real-world operational and technical context. Across the development of these infrastructure utilities, my role was that of the solution architect. I identified the operational bottlenecks, defined the administrative and database requirements, and directed AI engines to generate the code. Crucially, I manually audited, tested, and verified every output to ensure stability before deployment.
+        </p>
+        
+        <div class="topology-box" style="margin-top: 30px; overflow: hidden; border-radius: 6px; border: 1px solid #e5e7eb; border-top: 4px solid var(--gold);">
+            <div style="background: #111827; padding: 16px 24px; border-bottom: 1px solid #e5e7eb;">
+                <p style="font-family: 'Consolas', monospace; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin: 0; font-weight: 600;">Operational Automation Framework Matrix</p>
             </div>
-
-            <!-- Connection Channel 2: Email -->
-            <div class="blueprint-card" style="background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <p class="section-label" style="margin-bottom: 12px;">Direct Inquiries</p>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">Email Correspondence</h3>
-                    <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
-                        Have a formal opening, project requirements document, or a technical inquiry? Send a message directly to my inbox. I monitor my correspondence daily and generally reply within one business day.
-                    </p>
-                </div>
-                <a href="mailto:bryon.a.carlson+github@gmail.com" class="tag" style="display: inline-block; text-align: center; background: var(--gold); color: var(--navy); padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s;">
-                    Send an Email &rarr;
-                </a>
-            </div>
-
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Core Launcher Component</th>
+                        <th>Functional Module</th>
+                        <th>Underlying Architecture / Engine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Core Launcher" class="module-name">[ IT-Ops-Console.exe ]</td>
+                        <td data-label="Functional Module">PC Onboarding Module</td>
+                        <td data-label="Architecture">Endpoint Provisioning Scripts</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Core Launcher" class="module-name">[ IT-Ops-Console.exe ]</td>
+                        <td data-label="Functional Module">Software Inventory Builder</td>
+                        <td data-label="Architecture">Application Analytics Engine</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Core Launcher" class="module-name">[ IT-Ops-Console.exe ]</td>
+                        <td data-label="Functional Module">Backup-All Pipeline</td>
+                        <td data-label="Architecture">SHA-256 Cryptographic Delta Sync</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Core Launcher" class="module-name">[ IT-Ops-Console.exe ]</td>
+                        <td data-label="Functional Module">IT Asset Manager v13.4</td>
+                        <td data-label="Architecture">SQLite Engine &amp; [ Inventory.db ]</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Communication Ethos Callout -->
-    <div class="showcase-block" style="margin-top: 40px; background: rgba(212, 175, 55, 0.05); padding: 30px; border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0;">
-        <h4 style="font-family: 'Source Sans 3', sans-serif; font-size: 1.1rem; color: var(--navy); font-weight: 600; margin-bottom: 8px;">Operational Availability:</h4>
-        <p style="font-size: 1rem; color: #4b5563; line-height: 1.6; margin: 0;">
-            Based in the Eastern Time Zone (EST). While I am accustomed to managing 24/7 critical major incidents and shifts globally, standard non-emergency correspondence is reviewed during business hours.
+    <div class="showcase-block">
+        <div class="showcase-grid">
+            <div class="showcase-details">
+                <p class="section-label">Core Process Launcher</p>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">IT Ops Console Orchestrator</h3>
+                <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 20px;">
+                    Developed to consolidate separate administrative tools and support scripts into a single, compiled Windows desktop application. This utility provides technicians with a clean interface that eliminates directory mapping errors, minimizes execution delays, and streamlines on-site troubleshooting calls.
+                </p>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 0.95rem; color: var(--navy); font-weight: 600; margin-bottom: 8px;">Development &amp; Verification Steps:</h4>
+                    <ul>
+                        <li><strong>Consolidated Launch Scripting:</strong> Managed the integration of background processes within a native launcher wrapper, completely hiding command-line background flashes during execution to maintain a professional user experience.</li>
+                        <li><strong>WPF/XAML User Interface:</strong> Designed a modern, clean dark-mode layout using structural XML layout templates, ensuring clear visual separation of tools and responsive element scaling across local display resolutions.</li>
+                        <li><strong>Safe UI Threading Execution:</strong> Structured the script processing logic to execute resource-heavy tasks independently, ensuring that the main user dashboard interface never freezes or locks up while automated support routines run in the background.</li>
+                    </ul>
+                </div>
+                <div class="tag-list">
+                    <span class="tag">WPF Interface Layout</span>
+                    <span class="tag">Process Orchestration</span>
+                    <span class="tag">Asynchronous Testing</span>
+                </div>
+            </div>
+            
+            <div class="screenshot-container">
+                <img src="assets/img/it-ops-console.png" alt="IT Ops Console Compiled Layout Dashboard" />
+                <p class="screenshot-caption">Figure 1: Interface view of the compiled IT Ops Console UI launcher, designed to coordinate local support scripts and system admin shortcuts from a centralized dashboard.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="showcase-block">
+        <div class="showcase-grid" style="display: block;">
+            <div class="showcase-details">
+                <p class="section-label">Data Management Plane</p>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">IT Asset Manager (v13.4 Relational UI)</h3>
+                <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 20px;">
+                    Built to replace an unreliable, single-user manual Excel spreadsheet tracker with an embedded, local relational database solution. The utility automatically queries local endpoint attributes and logs assets directly into a structured database.
+                </p>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 0.95rem; color: var(--navy); font-weight: 600; margin-bottom: 8px;">Development &amp; Verification Steps:</h4>
+                    <ul>
+                        <li><strong>Relational SQLite Transition:</strong> Directed the migration of tracking variables into a standalone relational database engine via standard SQLite dynamic libraries, allowing rapid local querying without installing software engines.</li>
+                        <li><strong>Automated String Parsing:</strong> Configured string evaluation rules within the scanning module to parse system text fields, pulling computer names, active models, and vendor specs to organize asset inventories.</li>
+                        <li><strong>Schema Protection and Continuity:</strong> Designed the application data tables to isolate specific hardware profiles dynamically based on data contexts, preventing database schema validation failures or broken fields.</li>
+                    </ul>
+                </div>
+                <div class="tag-list">
+                    <span class="tag">SQLite Relational Database</span>
+                    <span class="tag">String Evaluation</span>
+                    <span class="tag">Data Architecture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="showcase-block">
+        <p class="section-label">Infrastructure Protection Layer</p>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 16px;">Cryptographic Backup Pipeline</h3>
+        <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
+            A state-aware backup automation tool designed to protect active scripting changes, deployment configurations, and local system documentation across external backup volumes. It optimizes transfer times and eliminates data duplication using strict validation rules.
         </p>
+        
+        <div class="blueprint-grid">
+            <div class="blueprint-card">
+                <h4>Active File Handlers</h4>
+                <p>
+                    Ensured stable execution limits by managing standard streaming memory boundaries. Configured the file sharing attributes safely to allow the automated engine to copy active system configuration logs even while files are open, preventing script crashes.
+                </p>
+            </div>
+            <div class="blueprint-card">
+                <h4>SHA-256 Verification</h4>
+                <p>
+                    Built a cryptographic verification step that logs file hashes into a local ledger tracking file (`hashlist.json`). The backup engine validates SHA-256 signatures before and after running to confirm data integrity and only copy modified streams.
+                </p>
+            </div>
+            <div class="blueprint-card">
+                <h4>Automated System Isolation</h4>
+                <p>
+                    Programmed a background data recovery loop that operates completely independently of human interaction. The process identifies critical local configuration files and moves them into secure, verified directories (`\SystemData\.assets`) to guarantee recovery.
+                </p>
+            </div>
+        </div>
+
+        <div class="tag-list">
+            <span class="tag">SHA-256 Verification</span>
+            <span class="tag">I/O Stream Controls</span>
+            <span class="tag">Backup Automation</span>
+        </div>
     </div>
 
 </main>
