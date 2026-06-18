@@ -3,10 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Major Incident Command Log | Bryon Carlson</title>
+    <title>Incidents &amp; Case Studies | Bryon Carlson</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .incident-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .incident-card.featured {
+            border-top: 4px solid var(--gold);
+        }
+        .incident-header {
+            margin-bottom: 20px;
+        }
+        .incident-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin: 0 0 8px 0;
+        }
+        .incident-meta {
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+        .incident-section {
+            margin-top: 18px;
+        }
+        .incident-section h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin: 0 0 6px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .incident-section p, .incident-section ul {
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 0 0 12px 0;
+            font-size: 1.05rem;
+        }
+        .incident-section ul {
+            padding-left: 20px;
+        }
+        .incident-section li {
+            margin-bottom: 6px;
+        }
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f3f4f6;
+        }
+        .tag {
+            background: #f3f4f6;
+            color: #4b5563;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,121 +97,180 @@
     </nav>
 </header>
 
-<section class="hero" style="min-height: 40vh; padding: 60px 24px;">
+<section class="hero">
     <div class="hero-rule"></div>
-    <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.5rem);">Incident Command Log</h1>
-    <p class="hero-title">A History of Triage, Infrastructure Resolution &amp; Team Building</p>
-    <p class="hero-tagline" style="max-width: 750px;">
-        Anonymized case studies and operational logs demonstrating real-world problem-solving, structural team evolution, and personal accountability under pressure.
+    <h1 class="hero-name">Incident Command &amp;<br>Operations Architecture</h1>
+    <p class="hero-title">Major Incident Case Studies &amp; Technical Retrospectives</p>
+    <p class="hero-tagline">
+        When complex infrastructure failures threaten business continuity, effective recovery requires rigorous triage, decisive command presence, and immediate architectural pivot strategies. Below is a log of enterprise operational restoration under pressure.
     </p>
 </section>
 
-<section class="timeline-section">
-    <div class="container">
-        <p class="section-label">Case Studies</p>
-        <h2 class="section-title">Operational Records</h2>
-        <div class="section-rule"></div>
+<main class="container portfolio-showcase">
 
-        <div class="timeline">
-            
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-dates">Infrastructure Outage</div>
-                <div class="timeline-company">Data Center Power Cascade</div>
-                <div class="timeline-role">Category: Infrastructure / Power / Environmental</div>
-                <div class="timeline-desc">
-                    <p style="margin-bottom: 12px; font-weight: 400; color: var(--navy);">
-                        <strong>What Happened:</strong> A routine utility street power failure triggered a generator spinup. However, due to incorrectly wired UPS units (some plugged into themselves), there was no bridge power during the transition window, causing a massive device outage. When power restored, AC units failed to initialize, causing recovered devices to overheat and drop again, cascading application failures across multiple data centers via cross-system dependencies.
-                    </p>
-                    <p style="margin-bottom: 12px;">
-                        <strong>Root Cause:</strong> Latent infrastructure debt. Incorrect UPS wiring existed undetected until a routine utility outage exposed the vulnerability catastrophically. The generator functioned correctly; supporting gap infrastructure failed.
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        <strong>Key Lesson:</strong> A single point of latent failure can turn a survivable event into a multi-system disaster. Regular infrastructure audits—especially of power path wiring—are mandatory in critical data center environments.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">Multi-DC Blast Radius</span>
-                        <span class="tag">Infrastructure Debt</span>
-                        <span class="tag">Power Paths</span>
-                    </div>
-                </div>
-            </div>
+    <!-- FEATURED NEW INCIDENT -->
+    <div class="incident-card featured">
+        <div class="incident-header">
+            <span class="incident-meta">Category: Infrastructure / Network / Transport / Disaster Recovery</span>
+            <h2 class="incident-title">Data Center Isolation &amp; Split-Brain DR Failover Exception</h2>
+        </div>
+        
+        <div class="incident-section">
+            <h4>What Happened:</h4>
+            <p>Street-level mechanical excavation by a third party cleanly severed both the primary and secondary dual-path external carrier fiber ingress conduits feeding the Atlanta Data Center. Automated Disaster Recovery (DR) failover mechanisms to the Dallas DR facility failed to dynamically execute because the local switch interfaces remained in a negotiation state with local termination hardware, trapping the automated BGP keep-alive timers in an active-wait loop instead of forcing an immediate drop.</p>
+        </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-dates">Process Governance</div>
-                <div class="timeline-company">The Friday Night P3 That Wasn't</div>
-                <div class="timeline-role">Category: Application / Process / Escalation Culture</div>
-                <div class="timeline-desc">
-                    <p style="margin-bottom: 12px; font-weight: 400; color: var(--navy);">
-                        <strong>What Happened:</strong> At 5:30 PM on a Friday, a white-glove customer reported recurring failing transactions. A P3 bridge was opened, but the entire escalation chain (L1 up to Supervisor's Supervisor) failed to respond. Management pressure forced a priority inflation escalation to a P2 to compel engagement. A VP intervened to staff the bridge, where the supervisor challenged the designation based on policy. Upper management held the line: "If I page for a P5, you treat it like a P1 and join with urgency."
-                    </p>
-                    <p style="margin-bottom: 12px;">
-                        <strong>The Reality &amp; Resolution:</strong> Once teams engaged, the issue was identified as a non-acute bug causing 1–3 failures out of 30,000 transactions every few days. The bridge disbanded by 8:30 PM, and the software defect was resolved via a standard patch cycle tracked in Jira.
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        <strong>Root Cause &amp; Key Lesson:</strong> An on-call culture using ITIL priority classifications as a shield against accountability rather than a guide for response. Incident priority must reflect actual business impact and urgency—not serve as a gating mechanism for team engagement.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">Culture &amp; Accountability</span>
-                        <span class="tag">ITIL Alignment</span>
-                        <span class="tag">Priority Inflation</span>
-                    </div>
-                </div>
-            </div>
+        <div class="incident-section">
+            <h4>The Command &amp; Resolution:</h4>
+            <p>As Incident Commander, I established the emergency crisis command bridge. Recognizing the automated routing stall, I authorized an immediate manual override sequence. Network Engineering broke the negotiation loops, executed manual BGP route injections to strip advertisements from Atlanta, and swung 100% of global live user traffic to the Dallas DR facility. Core transactional processing and web endpoints stabilized immediately, locking total business downtime to exactly 33 minutes.</p>
+        </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-dates">Operational Accountability</div>
-                <div class="timeline-company">Weekend Coverage Gaps</div>
-                <div class="timeline-role">Category: Staffing / On-Call Culture</div>
-                <div class="timeline-desc">
-                    <p style="margin-bottom: 12px; font-weight: 400; color: var(--navy);">
-                        <strong>What Happened:</strong> During an off-call weekend out to lunch with family, a critical incident escalated, and the scheduled on-call Incident Manager failed to respond to pages. Voluntarily stepped in, managing the crisis remotely for two hours while simultaneously paging the on-call resources and the team manager until full resolution was achieved.
-                    </p>
-                    <p style="margin-bottom: 12px;">
-                        <strong>Operational Context:</strong> This highlighted a recurring understaffing risk during the early stages of building out the incident management practice. Consistent willingness to cover these critical operational exposure gaps directly driven promotion tracks.
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        <strong>Key Lesson:</strong> "The best ability is availability." In a 24/7 operations environment, the difference between a minor outage and a major one often comes down to who picks up the phone.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">Availability</span>
-                        <span class="tag">24/7 Operations</span>
-                        <span class="tag">Coverage Redundancy</span>
-                    </div>
-                </div>
-            </div>
+        <div class="incident-section">
+            <h4>The Technical Continuity Gaps:</h4>
+            <p>Local telemetry dashboards initially reported "Green/Active" because internal application loops were responding normally within the isolated datacenter, missing the external communication blackout entirely. Furthermore, a single legacy reporting application containing an un-replicated database residing strictly on physical hardware in Atlanta remained isolated until carrier crews completed a 13-hour fusion-splicing overhaul of the main conduit lines.</p>
+        </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-dates">Practice Maturation</div>
-                <div class="timeline-company">Building a 24/7 Team from Scratch</div>
-                <div class="timeline-role">Category: Organizational / Team Building / ITIL Maturity</div>
-                <div class="timeline-desc">
-                    <p style="margin-bottom: 12px; font-weight: 400; color: var(--navy);">
-                        <strong>The Inherited Situation:</strong> Took over a declining incident management team that dropped from 12 down to roughly 7 resources. Ultimately, a 3-person team absorbed the full 24/7 function, inheriting an unstable, non-ITIL-aligned practice with significant process debt and rampant priority inflation. Routine 12+ hour days were required to manage simultaneous high-priority incidents and cover shift overflows.
-                    </p>
-                    <p style="margin-bottom: 12px;">
-                        <strong>The Structural Solution:</strong> Engineered a global expansion strategy to achieve a mature, sustainable "Follow-the-Sun" framework. Incorporated and evaluated various regional support models, ultimately scaling and shifting the consolidated offshore hubs into a highly effective, optimized US + Costa Rica operation.
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        <strong>Evolution Framework:</strong> Progressed intentionally from Phase 1 (Inherited instability &amp; reactive firefighting) through Phase 2 (ITIL-adjacent operational stabilization) to Phase 3 (True ITIL-following global framework maturity). Shifting reliance away from individual heroics and into hard process structures.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">Follow-the-Sun Model</span>
-                        <span class="tag">Process Maturation</span>
-                        <span class="tag">Global Hub Scaling</span>
-                    </div>
-                </div>
-            </div>
+        <div class="incident-section">
+            <h4>Key Lessons &amp; Problem Management Corrective Actions:</h4>
+            <ul>
+                <li><strong>Telemetry Remediation:</strong> Deployed end-to-end synthetic transaction monitoring to alert on client-side failures, removing dependencies on localized network heartbeat loops.</li>
+                <li><strong>Link-State Re-engineering:</strong> Re-coded core BGP parameters to drop interface power states instantly on carrier optical light loss, forcing instant automated failovers.</li>
+                <li><strong>Path Diversification Architecture:</strong> Provisioned a secondary provider network entering the campus via an alternate street-level ingress grid on the opposite side of the building to eliminate single-point excavation failures.</li>
+            </ul>
+        </div>
 
+        <div class="tag-container">
+            <span class="tag">Split-Brain Routing</span>
+            <span class="tag">BGP Route Injection</span>
+            <span class="tag">Manual DR Failover Override</span>
+            <span class="tag">Monitoring Blind Spots</span>
+            <span class="tag">ITIL Continuity</span>
         </div>
     </div>
-</section>
+
+    <!-- INCIDENT 2 -->
+    <div class="incident-card">
+        <div class="incident-header">
+            <span class="incident-meta">Category: Infrastructure / Power / Environmental</span>
+            <h2 class="incident-title">Data Center Power Cascade</h2>
+        </div>
+        
+        <div class="incident-section">
+            <h4>What Happened:</h4>
+            <p>A routine utility street power failure triggered a generator spinup. However, due to incorrectly wired UPS units (some plugged into themselves), there was no bridge power during the transition window, causing a massive device outage. When power restored, AC units failed to initialize, causing recovered devices to overheat and drop again, cascading application failures across multiple data centers via cross-system dependencies.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Root Cause:</h4>
+            <p>Latent infrastructure debt. Incorrect UPS wiring existed undetected until a routine utility outage exposed the vulnerability catastrophically. The generator functioned correctly; supporting gap infrastructure failed.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Key Lesson:</h4>
+            <p>A single point of latent failure can turn a survivable event into a multi-system disaster. Regular infrastructure audits—especially of power path wiring—are mandatory in critical data center environments.</p>
+        </div>
+
+        <div class="tag-container">
+            <span class="tag">Multi-DC Blast Radius</span>
+            <span class="tag">Infrastructure Debt</span>
+            <span class="tag">Power Paths</span>
+            <span class="tag">Process Governance</span>
+        </div>
+    </div>
+
+    <!-- INCIDENT 3 -->
+    <div class="incident-card">
+        <div class="incident-header">
+            <span class="incident-meta">Category: Application / Process / Escalation Culture</span>
+            <h2 class="incident-title">The Friday Night P3 That Wasn't</h2>
+        </div>
+        
+        <div class="incident-section">
+            <h4>What Happened:</h4>
+            <p>At 5:30 PM on a Friday, a white-glove customer reported recurring failing transactions. A P3 bridge was opened, but the entire escalation chain (L1 up to Supervisor's Supervisor) failed to respond. Management pressure forced a priority inflation escalation to a P2 to compel engagement. A VP intervened to staff the bridge, where the supervisor challenged the designation based on policy. Upper management held the line: "If I page for a P5, you treat it like a P1 and join with urgency."</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>The Reality &amp; Resolution:</h4>
+            <p>Once teams engaged, the issue was identified as a non-acute bug causing 1–3 failures out of 30,000 transactions every few days. The bridge disbanded by 8:30 PM, and the software defect was resolved via a standard patch cycle tracked in Jira.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Root Cause &amp; Key Lesson:</h4>
+            <p>An on-call culture using ITIL priority classifications as a shield against accountability rather than a guide for response. Incident priority must reflect actual business impact and urgency—not serve as a gating mechanism for team engagement.</p>
+        </div>
+
+        <div class="tag-container">
+            <span class="tag">Culture &amp; Accountability</span>
+            <span class="tag">ITIL Alignment</span>
+            <span class="tag">Priority Inflation</span>
+            <span class="tag">Operational Accountability</span>
+        </div>
+    </div>
+
+    <!-- INCIDENT 4 -->
+    <div class="incident-card">
+        <div class="incident-header">
+            <span class="incident-meta">Category: Staffing / On-Call Culture</span>
+            <h2 class="incident-title">Weekend Coverage Gaps</h2>
+        </div>
+        
+        <div class="incident-section">
+            <h4>What Happened:</h4>
+            <p>During an off-call weekend out to lunch with family, a critical incident escalated, and the scheduled on-call Incident Manager failed to respond to pages. Voluntarily stepped in, managing the crisis remotely for two hours while simultaneously paging the on-call resources and the team manager until full resolution was achieved.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Operational Context:</h4>
+            <p>This highlighted a recurring understaffing risk during the early stages of building out the incident management practice. Consistent willingness to cover these critical operational exposure gaps directly driven promotion tracks.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Key Lesson:</h4>
+            <p>"The best ability is availability." In a 24/7 operations environment, the difference between a minor outage and a major one often comes down to who picks up the phone.</p>
+        </div>
+
+        <div class="tag-container">
+            <span class="tag">Availability</span>
+            <span class="tag">24/7 Operations</span>
+            <span class="tag">Coverage Redundancy</span>
+            <span class="tag">Practice Maturation</span>
+        </div>
+    </div>
+
+    <!-- INCIDENT 5 -->
+    <div class="incident-card">
+        <div class="incident-header">
+            <span class="incident-meta">Category: Organizational / Team Building / ITIL Maturity</span>
+            <h2 class="incident-title">Building a 24/7 Team from Scratch</h2>
+        </div>
+        
+        <div class="incident-section">
+            <h4>The Inherited Situation:</h4>
+            <p>Took over a declining incident management team that dropped from 12 down to roughly 7 resources. Ultimately, a 3-person team absorbed the full 24/7 function, inheriting an unstable, non-ITIL-aligned practice with significant process debt and rampant priority inflation. Routine 12+ hour days were required to manage simultaneous high-priority incidents and cover shift overflows.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>The Structural Solution:</h4>
+            <p>Engineered a global expansion strategy to achieve a mature, sustainable "Follow-the-Sun" framework. Incorporated and evaluated various regional support models, ultimately scaling and shifting the consolidated offshore hubs into a highly effective, optimized US + Costa Rica operation.</p>
+        </div>
+
+        <div class="incident-section">
+            <h4>Evolution Framework:</h4>
+            <p>Progressed intentionally from Phase 1 (Inherited instability &amp; reactive firefighting) through Phase 2 (ITIL-adjacent operational stabilization) to Phase 3 (True ITIL-following global framework maturity). Shifting reliance away from individual heroics and into hard process structures.</p>
+        </div>
+
+        <div class="tag-container">
+            <span class="tag">Follow-the-Sun Model</span>
+            <span class="tag">Process Maturation</span>
+            <span class="tag">Global Hub Scaling</span>
+        </div>
+    </div>
+
+</main>
 
 <footer class="site-footer">
-    <p>&copy; 2026 Bryon Carlson &mdash; Major Incident &amp; IT Operations Leader</p>
+    <p>&copy; 2026 Bryon Carlson &mdash; Senior Incident Manager &amp; IT Operations Leader</p>
 </footer>
 
 </body>
